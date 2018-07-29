@@ -1,0 +1,171 @@
+
+.m_btn_details {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #5c25d9;
+  color: #f5f8fa;
+  border-radius: 15px;
+}
+
+.map_container {
+  width: calc(100% - 300px);
+  display: inline-block;
+  float: left;
+  .vue-map {
+    .gm-style-iw {
+      overflow: visible !important;
+      div {
+        overflow: visible !important;
+      }
+    }
+    .marker_info {
+      position: relative;
+      padding: 15px;
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+      .task_info {
+        .block {
+          width: 49%;
+          margin-top: 10px;
+          display: inline-block;
+          img {
+            width: 12px;
+            height: 12px;
+            object-fit: cover;
+            display: inline-block;
+          }
+          p {
+            display: inline-block;
+          }
+        }
+
+      }
+      .router_link {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .block_icon_marker {
+        margin-top: 10px;
+        img.pointer {
+          width: 11px;
+          height: 17px;
+          object-fit: cover;
+          display: inline-block;
+        }
+        img {
+          width: 12px;
+          height: 12px;
+          object-fit: cover;
+          display: inline-block;
+        }
+        .calendar {
+          margin-right: 5px;
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        .text {
+          width: 230px;
+          font-size: 12px;
+          display: inline-block;
+          p {
+            margin-bottom: 5px;
+
+          }
+        }
+      }
+      .image {
+        position: absolute;
+        top: -20px;
+        left: -25px;
+        border-radius: 50px;
+        box-shadow: 0px 5px 20px 0px #888;
+        width:24px;
+        height:24px;
+      }
+    }
+  }
+  .vue-map-container {
+    width: 100%;
+    height: 90vh;
+  }
+}
+
+.map_sidebar {
+  width: 300px;
+  background: white;
+  display: inline-block;
+  float: left;
+  height: 90vh;
+  .filter {
+    padding: 15px;
+    height: 270px;
+    overflow: hidden;
+    .ivu-checkbox-group-item {
+      width: 100px;
+    }
+  }
+  .task_list {
+    height: calc(100% - 210px);
+    overflow: scroll;
+    padding: 30px 10px;
+    box-shadow: inset 0 5px 20px 0px #888888;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .task_single_list {
+      webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 25px;
+    }
+    .task_details {
+      margin-left: 5px;
+      p {
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 3px;
+      }
+      a {
+        font-size: 14px;
+        text-decoration: underline;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        border-bottom: 1px solid transparent;
+        color: #692fed;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .map_sidebar {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  .map_container {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+}
